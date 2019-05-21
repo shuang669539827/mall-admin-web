@@ -33,7 +33,7 @@
           type="textarea"
           placeholder="请输入内容"></el-input>
       </el-form-item>
-      <el-form-item label="商品货号：">
+      <el-form-item label="商品货号(*)：" prop="productSn">
         <el-input v-model="value.productSn"></el-input>
       </el-form-item>
       <el-form-item label="商品售价：">
@@ -92,7 +92,8 @@
           productCategoryId: [{required: true, message: '请选择商品分类', trigger: 'blur'}],
           brandId: [{required: true, message: '请选择商品品牌', trigger: 'blur'}],
           description: [{required: true, message: '请输入商品介绍', trigger: 'blur'}],
-          requiredProp: [{required: true, message: '该项为必填项', trigger: 'blur'}]
+          requiredProp: [{required: true, message: '该项为必填项', trigger: 'blur'}],
+          productSn:[{required:true,message:"请输入商品编号",trigger:'blur'}]
         }
       };
     },
